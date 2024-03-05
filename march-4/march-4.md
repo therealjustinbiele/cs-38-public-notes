@@ -83,3 +83,51 @@ public class NestedForLoopExample {
 ```
 
 In the nested for loop example, the outer loop iterates three times, and for each iteration of the outer loop, the inner loop iterates three times, resulting in a total of nine iterations.
+
+# File I/O
+The Java API offers several classes to facilitate reading from and writing to files. Here's a breakdown of commonly used classes for these tasks:
+
+1. **PrintWriter**:
+   - `PrintWriter` is a class used for writing formatted representations of objects to a text-output stream.
+   - It provides convenient methods for writing various data types to a file, such as `println()` and `printf()`.
+   - Example usage:
+     ```java
+     PrintWriter writer = new PrintWriter("output.txt");
+     writer.println("Hello, world!");
+     writer.close();
+     ```
+
+2. **FileWriter** (optional, used in conjunction with PrintWriter):
+   - `FileWriter` is used to write characters to a file.
+   - It is typically used in conjunction with `PrintWriter` for writing text to a file.
+   - Example usage:
+     ```java
+     FileWriter fileWriter = new FileWriter("output.txt");
+     PrintWriter writer = new PrintWriter(fileWriter);
+     writer.println("Hello, world!");
+     writer.close();
+     ```
+
+3. **Scanner**:
+   - `Scanner` is used to parse primitives and strings from the input stream (in this case, a file).
+   - It provides methods for reading various data types from a file, such as `nextInt()`, `nextLine()`, etc.
+   - Example usage:
+     ```java
+     Scanner scanner = new Scanner(new File("input.txt"));
+     while (scanner.hasNextLine()) {
+         String line = scanner.nextLine();
+         System.out.println(line);
+     }
+     scanner.close();
+     ```
+
+4. **File**:
+   - `File` represents a file or directory pathname.
+   - It provides methods for querying information about the file, such as existence, permissions, etc.
+   - Example usage:
+     ```java
+     File file = new File("input.txt");
+     System.out.println("File exists: " + file.exists());
+     ```
+
+Using these classes, you can easily manipulate files in Java, whether it's for reading data from them (using `Scanner` and `File`) or writing data to them (using `PrintWriter` and optionally `FileWriter`). Always remember to handle exceptions properly when working with files, as file operations can throw IOExceptions.
