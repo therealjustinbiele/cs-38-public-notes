@@ -1,3 +1,4 @@
+# Sentinels and Accumulators
 ### Sentinels in Java:
 
 Sentinels in Java are special values used to indicate the end of input in situations where the length of input is not known in advance. They are commonly used in conjunction with loops to terminate input taking when a specific value is encountered.
@@ -52,7 +53,7 @@ public class AccumulatorExample {
 
 In this example, `sum` acts as the accumulator variable, which accumulates the sum of all the numbers in the `numbers` array.
 
-### For Loops / Nested For Loops in Java:
+# For Loops / Nested For Loops in Java:
 
 For loops in Java are used to iterate over a range of values or elements in an array or collection. Nested for loops are for loops that are placed inside other for loops, allowing for more complex iteration patterns, such as iterating over two-dimensional arrays or performing nested iterations.
 
