@@ -5,6 +5,10 @@
 
 [Intro video](https://ivc-new.instructure.com/courses/9804/pages/section-6-dot-1-objects-and-classes?module_item_id=725081)
 
+[Documentation and Pratice With Java Classes](https://runestone.academy/ns/books/published/csjava/Unit6-Writing-Classes/topic-6-1-parts-of-class.html#creating-a-class)
+
+[Part 2](https://runestone.academy/ns/books/published/csjava/Unit6-Writing-Classes/topic-6-2-writing-constructors.html)
+
 #### UML Diagram
 UML diagram is meant to visualize the anatomy of a class. Used for planning, designing etc.
 ```
