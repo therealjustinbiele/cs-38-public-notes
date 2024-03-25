@@ -6,7 +6,8 @@ public class Rectangle //pg 367
 {
     private double length;
     private double width;
-    //private double area; //QQQ
+    private double area; //QQQ
+    
     /**
     Constructor
     @param len The length of the rectangle.
@@ -15,8 +16,8 @@ public class Rectangle //pg 367
 
     public Rectangle(double len, double w)
     {
-        //QQQ
-        
+        length = len;
+        width = w;
     }
 
     /**
