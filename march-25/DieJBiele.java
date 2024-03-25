@@ -4,7 +4,7 @@ import java.util.Random;
    The Die class simulates a six-sided die.
 */
 
-public class DieYName //pg 376
+public class DieJBiele //pg 376
 {
    private int sides;   // Number of sides
    private int value;   // The die's value
@@ -15,10 +15,9 @@ public class DieYName //pg 376
       @param numSides The number of sides for this die.
    */
    
-   public DieYName(int numSides)
+   public DieJBiele(int numSides)
    {
-      //QQQ
-      
+      sides = numSides;
    }
    
    /**
@@ -30,9 +29,10 @@ public class DieYName //pg 376
    {
       // Create a Random object.
       Random rand = new Random();
+      int newValue = rand.nextInt(getSides());
       
       // Get a random value for the die.
-      value = 123;
+      value = newValue;
    }
    
    /**
@@ -42,7 +42,7 @@ public class DieYName //pg 376
    
    public int getSides()
    {
-      return 123;
+      return sides;
    }
    
    /**
@@ -52,6 +52,6 @@ public class DieYName //pg 376
    
    public int getValue()
    {
-      return 123;
+      return value;
    }
 }

@@ -128,3 +128,6 @@ public class Rectangle //pg 367
     }
 }
 ```
+
+In BlueJ, you can right click this class and create a new Rectangle object. You can run the accessor and mutator methods from the BlueJ GUI to get and set values to the object. 
+

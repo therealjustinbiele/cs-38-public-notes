@@ -2,7 +2,7 @@
    This program simulates the rolling of dice.
 */
 
-public class DiceDemoYName //pg 378
+public class DiceDemoJBiele //pg 378
 {
    public static void main(String[] args)
    {
@@ -10,9 +10,9 @@ public class DiceDemoYName //pg 378
       final int DIE2_SIDES = 12; // Number of sides for die #2
       final int MAX_ROLLS = 5;   // Number of times to roll
       
-      // Create two instances of the DieYName class.
-      DieYName die1 = new DieYName(DIE1_SIDES);
-      DieYName die2 = new DieYName(DIE2_SIDES);
+      // Create two instances of the DieJBiele class.
+      DieJBiele die1 = new DieJBiele(DIE1_SIDES);
+      DieJBiele die2 = new DieJBiele(DIE2_SIDES);
       
       // Display the initial state of the dice.
       System.out.println("This simulates the rolling of a " +
