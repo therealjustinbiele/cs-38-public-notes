@@ -48,3 +48,24 @@ In this example, depending on the arguments passed, Java will determine which ve
 
 [Overloading Methods Class Example](./OverloadedMethods.java)
 
+### Testing A Class
+
+1. Create several objects from the class
+`ObjectType myNewObj1 = new ObjectType();`
+`ObjectType myNewObj2 = new ObjectType();`
+`ObjectType myNewObj3 = new ObjectType();`
+
+2. Call methods from the class to check if they are written correctly.
+
+```java
+
+public class TesterJBiele
+{
+    public static void main(String[] args)
+    {
+        HourlyWorker w1 = new HourlyWorker("Todd", 20.00);
+        HourlyWorker w2 = new HourlyWorker("Susan", 25.00);
+    }
+}
+
+```
