@@ -1,12 +1,24 @@
-import javax.swing.JOptionPane;
+import java.util.Scanner;
 
 /**
    This program gathers sales amounts for the week.
    It uses the SalesData class to display the total,
    average, highest, and lowest sales amounts.
+   Sample run:
+        Enter the sales for day 1: 11
+        Enter the sales for day 2: 22
+        Enter the sales for day 3: 33
+        Enter the sales for day 4: 44
+        Enter the sales for day 5: 55
+        Enter the sales for day 6: 66
+        Enter the sales for day 7: 77
+        Total Sales:   $308.00
+        Average Sales: $44.00
+        Highest Sales: $77.00
+        Lowest Sales:  $11.00
 */
 
-public class Sales
+public class Sales //pg 456
 {
    public static void main(String[] args)
    {
@@ -24,17 +36,10 @@ public class Sales
 
       // Display the total, average, highest, and lowest
       // sales amounts for the week.
-      JOptionPane.showMessageDialog(null,
-         String.format("The total sales were $%,.2f\n" +
-                       "The average sales were $%,.2f\n" +
-                       "The highest sales were $%,.2f\n" +
-                       "The lowest sales were $%,.2f",
-                       week.getTotal(),
-                       week.getAverage(),
-                       week.getHighest(),
-                       week.getLowest()));
-
-      System.exit(0);
+      System.out.printf("Total Sales:  $%,1.2f\n", week.getTotal());
+      System.out.printf("Average Sales: $%,1.2f\n", week.getAverage());
+      System.out.printf("Highest Sales: $%,1.2f\n", week.getHighest());
+      System.out.printf("Lowest Sales:  $%,1.2f\n", week.getLowest());
    }
 
    /**
@@ -45,14 +50,15 @@ public class Sales
 
    private static void getValues(double[] array)
    {
-      String input;  // To hold user input.
+      // Create a Scanner object for keyboard input.
+      Scanner keyboard = new Scanner(System.in);
 
       // Get sales for each day of the week.
       for (int i = 0; i < array.length; i++)
       {
-         input = JOptionPane.showInputDialog(
-                  "Enter the sales for day " + (i + 1) + ".");
-         array[i] = Double.parseDouble(input);
+         System.out.print("Enter the sales for day " + 
+                          (i + 1) + ": ");
+         array[i] = keyboard.nextDouble();
       }
    }
 }
