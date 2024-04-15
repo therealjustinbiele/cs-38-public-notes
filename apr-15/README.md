@@ -36,3 +36,29 @@ These methods allow you to easily detect and respond to mouse events within your
 - `isReleased()`: Returns true if the mouse button was released since the last call to isReleased() or clearReleased().
 - `isReleased(int button)`: Returns true if the specified mouse button was released.
 - `clearReleased()`: Clears the released state of the mouse.
+
+
+public class MouseEx
+{
+    public static void main(String[] args)
+    {
+        mouse1();
+    }
+
+    public static void mouse1()
+    {
+        Draw screen = new Draw();
+        double x = 0;
+        double y;
+        int count = 0;
+        while (x < 10000)
+        {
+            screen.pause(500);
+            x = screen.mouseX();
+            y = screen.mouseY();
+            System.out.printf("%d: x: %.3f, y: %.3f \n", count, x, y);
+            count++;
+        }
+        System.out.println("\n Program exited");
+    }
+}
