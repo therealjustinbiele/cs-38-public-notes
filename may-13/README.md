@@ -63,3 +63,46 @@ obj2.setStaticField(20);
 System.out.println(obj1.getStaticField()); // Output: 20
 System.out.println(obj2.getStaticField()); // Output: 20
 ```
+
+Sure, here are the examples provided in Java:
+
+1. **Pass by value:**
+```java
+public class PassByValueExample {
+    public static void main(String[] args) {
+        int x = 10;
+        modifyValue(x);
+        System.out.println(x); // Output: 10
+    }
+
+    public static void modifyValue(int value) {
+        value = 20;
+    }
+}
+```
+
+2. **Pass by reference:**
+In Java, pass by reference isn't supported directly. However, you can achieve similar behavior by passing objects, as they are passed by value (the value being the reference to the object).
+
+```java
+import java.util.ArrayList;
+
+public class PassByReferenceExample {
+    public static void main(String[] args) {
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(1);
+        list.add(2);
+        list.add(3);
+        
+        modifyList(list);
+        
+        System.out.println(list); // Output: [1, 2, 3, 4]
+    }
+
+    public static void modifyList(ArrayList<Integer> list) {
+        list.add(4);
+    }
+}
+```
+
+In this example, we're passing an `ArrayList` object to the `modifyList` method. Changes made to the `list` object within the method are reflected in the original object outside of the method because the reference to the object is passed by value.
